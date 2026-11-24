@@ -30,8 +30,8 @@ Nous analysons les **ventes musicales** de la base d'exemple Chinook et construi
 | 4 à 5 tables reliées au minimum | 11 tables avec PK, FK et contraintes |
 | Dimension temporelle | `invoice.invoice_date` (analyses mensuelles et annuelles) |
 | Catégories / groupes | `genre`, `media_type`, pays |
-| Hiérarchie | `employee.reports_to` (pour une CTE récursive), artiste → album → piste |
-| Volume | **15 607 lignes** relevées dans le rapport de contrôle ; extension à prévoir pour les benchmarks volumineux |
+| Hiérarchie | artiste → album → piste |
+| Volume | **15 607 lignes** relevées dans le rapport de contrôle ; |
 | Licence ouverte | MIT ; source et licence citées |
 
 ## Structure du dépôt
