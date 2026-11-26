@@ -1,0 +1,59 @@
+
+version: 2
+
+models:
+  - name: fct_sales
+    description: "Table de faits des ventes, une ligne par article vendu."
+    columns:
+      - name: invoice_line_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+
+      - name: track_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_tracks')
+                field: track_id
+
+      - name: date_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+
+  - name: dim_customers
+    description: "Dimension des clients Chinook."
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_tracks
+    description: "Dimension des morceaux, albums, artistes et genres."
+    columns:
+      - name: track_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_date
+    description: "Dimension des dates de vente."
+    columns:
+      - name: date_key
+        data_tests:
+          - unique
+          - not_null

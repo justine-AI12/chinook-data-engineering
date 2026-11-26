@@ -1,0 +1,41 @@
+
+version: 2
+
+sources:
+  - name: chinook
+    schema: raw
+    description: "Données brutes Chinook importées depuis les CSV Kaggle"
+
+    tables:
+      - name: customer
+        description: "Clients de la boutique musicale"
+
+      - name: employee
+        description: "Employés et responsables"
+
+      - name: artist
+        description: "Artistes musicaux"
+
+      - name: album
+        description: "Albums des artistes"
+
+      - name: genre
+        description: "Genres musicaux"
+
+      - name: media_type
+        description: "Formats des fichiers musicaux"
+
+      - name: track
+        description: "Morceaux musicaux du catalogue"
+
+      - name: invoice
+        description: "Factures des clients"
+
+      - name: invoice_line
+        description: "Détails des morceaux vendus"
+
+      - name: playlist
+        description: "Listes de lecture"
+
+      - name: playlist_track
+        description: "Associations entre playlists et morceaux"
